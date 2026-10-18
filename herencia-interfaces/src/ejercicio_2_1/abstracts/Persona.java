@@ -1,4 +1,4 @@
-package src.models;
+package src.ejercicio_2_1.abstracts;
 
 public abstract class Persona {
     private String nombre;
@@ -25,6 +25,9 @@ public abstract class Persona {
     }
 
     public Persona setNombre(String nombre) {
+        if (nombre == null || nombre.isBlank()) {
+            throw new IllegalArgumentException("Error: el nombre es obligatorio");
+        }
         this.nombre = nombre;
         return this;
     }
@@ -34,6 +37,9 @@ public abstract class Persona {
     }
 
     public Persona setEdad(int edad) {
+        if (edad < 0) {
+            throw new IllegalArgumentException("Error: la edad debe ser mayor o igual a cero");
+        }
         this.edad = edad;
         return this;
     }

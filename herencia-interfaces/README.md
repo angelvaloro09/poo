@@ -1,6 +1,6 @@
 # Herencia e Interfaces en Java
 
-Proyecto sencillo de Programación Orientada a Objetos para demostrar el uso de herencia y paquetes en Java.
+Proyecto de Programación Orientada a Objetos para demostrar el uso de herencia, clases abstractas, interfaces y paquetes en Java.
 
 ## Requisitos
 
@@ -8,27 +8,55 @@ Proyecto sencillo de Programación Orientada a Objetos para demostrar el uso de 
 
 ## Compilación y Ejecución
 
-Desde la carpeta raíz del proyecto (`herencia-interfaces`), abre una terminal y ejecuta los siguientes comandos:
+Desde la carpeta raíz del proyecto (`herencia-interfaces`), abre una terminal y ejecuta los comandos correspondientes a cada ejercicio:
 
-### 1. Compilar
+### Ejercicio 2.1 (`ejercicio_2_1`)
+
+#### 1. Compilar
 
 ```bash
-javac src/Main.java src/models/*.java
+javac src/ejercicio_2_1/Main.java src/ejercicio_2_1/abstracts/*.java src/ejercicio_2_1/models/*.java
 ```
 
-### 2. Ejecutar
+#### 2. Ejecutar
 
 ```bash
-java src.Main
+java src.ejercicio_2_1.Main
+```
+
+#### Salida esperada:
+
+```text
+Se crea un Alumno...
+Se crea un Profesor...
+Un alumno llamado Sin nombre
+Un profesor de edad 0, con clave 10008000
 ```
 
 ---
 
-### Salida esperada
+### Ejercicio 2.2 (`ejercicio_2_2`)
+
+#### 1. Compilar
+
+```bash
+javac src/ejercicio_2_2/Main.java src/ejercicio_2_2/interfaces/*.java src/ejercicio_2_2/abstracts/*.java src/ejercicio_2_2/models/*.java
+```
+
+#### 2. Ejecutar
+
+```bash
+java src.ejercicio_2_2.Main
+```
+
+#### Salida esperada:
 
 ```text
-Se crea un class src.models.Alumno...
-Se crea un class src.models.Profesor...
-Un alumno llamado Sin nombre
-Un profesor de edad 0, con clave 10008000
+Se imprime una FiguraPlana...
+
+Se imprime un Triangulo con alto: 3, ancho: 4, area: 6.00, perimetro: 12.00
+
+Se imprime una FiguraPlana...
+
+Se imprime un Circulo con radio: 3, area: 28.27, perimetro: 18.85
 ```
