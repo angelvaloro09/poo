@@ -40,14 +40,14 @@ public class AppController {
     private int calculateAmounts() {
         int amount = -1;
         try {
-            amount = Integer.parseInt(amountTextField.getText());
+            amount = Integer.parseInt(amountTextField.getText().trim());
             if (amount <= 0) {
                 Alert alert = new Alert(AlertType.ERROR);
                 alert.setTitle("Error de cantidad");
                 alert.setHeaderText(null);
                 alert.setContentText("Por favor, ingrese una cantidad mayor a cero");
                 alert.showAndWait();
-                return -1;
+                return;
             }
         } catch (NumberFormatException e) {
             Alert alert = new Alert(AlertType.ERROR);

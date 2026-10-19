@@ -20,6 +20,7 @@ Cada ejercicio está estructurado como un proyecto independiente para garantizar
 | :--- | :--- | :--- | :---: |
 | [**Ejercicio 1.1**](./ejercicio-1-1/) | Cálculo de edad en años y meses a partir de la fecha de nacimiento. | JavaFX, FXML, `java.time` (`LocalDate`, `Period`), `Alert` | ✅ Concluido |
 | [**Ejercicio 1.2**](./ejercicio-1-2/) | Desglose de dinero en billetes y monedas en orden descendente. | JavaFX, FXML, Greedy Algorithm (división y módulo), `Alert` | ✅ Concluido |
+| [**Ejercicio 1.3**](./ejercicio-1-3/) | Análisis de cifras (pares, impares, mayor, menor) y cálculo de divisores. | JavaFX, FXML, `GridPane`, descomposición numérica, divisibilidad | ✅ Concluido |
 
 ---
 
@@ -91,4 +92,39 @@ ejercicio-1-2/
 
 - **Vía IDE (IntelliJ IDEA / NetBeans / Eclipse / VS Code)**:
   1. Abrir la carpeta `ejercicio-1-2` como proyecto Maven.
+  2. Ejecutar la clase `Main.java` o `App.java` haciendo clic derecho ➔ **Run**.
+
+---
+
+### [Ejercicio 1.3: Cifras y Divisores de un Número](./ejercicio-1-3/)
+
+#### Descripción
+Aplicación gráfica con ventana titulada *"Cifras y Divisores de un Número"*. Al ingresar un número entero positivo (o cero), calcula la cantidad de cifras, la suma de cifras impares, la suma de cifras pares, la suma total de cifras, la cifra mayor y la cifra menor presentadas en un formulario organizado mediante `GridPane`. Además, genera y enlista todos sus divisores ordenados de forma ascendente en un `TextArea` con scroll. Incluye función de limpiado de todos los campos y validación con `Alert`.
+
+#### Estructura del proyecto
+```text
+ejercicio-1-3/
+├── pom.xml
+└── src/
+    └── main/
+        ├── java/
+        │   └── com/angelvaloro09/ejercicio_1_3/
+        │       ├── App.java            # Punto de entrada de JavaFX (carga view.fxml)
+        │       ├── AppController.java  # Controlador con análisis numérico y eventos
+        │       └── Main.java           # Lanzador estándar compatible con cualquier IDE
+        └── resources/
+            └── com/angelvaloro09/ejercicio_1_3/
+                └── view.fxml           # Vista organizada con GridPane y TextArea
+```
+
+#### Ejecución
+
+- **Vía Terminal (Maven)**:
+  ```bash
+  cd interfaces-basicas/ejercicio-1-3
+  mvn clean javafx:run
+  ```
+
+- **Vía IDE (IntelliJ IDEA / NetBeans / Eclipse / VS Code)**:
+  1. Abrir la carpeta `ejercicio-1-3` como proyecto Maven.
   2. Ejecutar la clase `Main.java` o `App.java` haciendo clic derecho ➔ **Run**.
