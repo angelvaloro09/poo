@@ -21,6 +21,7 @@ Cada ejercicio está estructurado como un proyecto independiente para garantizar
 | [**Ejercicio 1.1**](./ejercicio-1-1/) | Cálculo de edad en años y meses a partir de la fecha de nacimiento. | JavaFX, FXML, `java.time` (`LocalDate`, `Period`), `Alert` | ✅ Concluido |
 | [**Ejercicio 1.2**](./ejercicio-1-2/) | Desglose de dinero en billetes y monedas en orden descendente. | JavaFX, FXML, Greedy Algorithm (división y módulo), `Alert` | ✅ Concluido |
 | [**Ejercicio 1.3**](./ejercicio-1-3/) | Análisis de cifras (pares, impares, mayor, menor) y cálculo de divisores. | JavaFX, FXML, `GridPane`, descomposición numérica, divisibilidad | ✅ Concluido |
+| [**Ejercicio 1.4**](./ejercicio-1-4/) | Generación de la tabla de multiplicar de un entero. | JavaFX, FXML, iteraciones, formato de texto, `Alert` | ✅ Concluido |
 
 ---
 
@@ -127,4 +128,39 @@ ejercicio-1-3/
 
 - **Vía IDE (IntelliJ IDEA / NetBeans / Eclipse / VS Code)**:
   1. Abrir la carpeta `ejercicio-1-3` como proyecto Maven.
+  2. Ejecutar la clase `Main.java` o `App.java` haciendo clic derecho ➔ **Run**.
+
+---
+
+### [Ejercicio 1.4: Tabla de Multiplicar](./ejercicio-1-4/)
+
+#### Descripción
+Aplicación gráfica con ventana titulada *"Ejemplo"*, que recibe un número entero en un campo compacto y genera su tabla de multiplicar completa (del 1 al 10) mostrada renglón por renglón en un `TextArea` de solo lectura. Incluye botón para limpiar campos y validación ante formatos no numéricos mediante `Alert`.
+
+#### Estructura del proyecto
+```text
+ejercicio-1-4/
+├── pom.xml
+└── src/
+    └── main/
+        ├── java/
+        │   └── com/angelvaloro09/ejercicio_1_4/
+        │       ├── App.java            # Punto de entrada de JavaFX (carga view.fxml)
+        │       ├── AppController.java  # Controlador con cálculo de tabla de multiplicar
+        │       └── Main.java           # Lanzador estándar compatible con cualquier IDE
+        └── resources/
+            └── com/angelvaloro09/ejercicio_1_4/
+                └── view.fxml           # Vista vertical con campo de entrada y TextArea
+```
+
+#### Ejecución
+
+- **Vía Terminal (Maven)**:
+  ```bash
+  cd interfaces-basicas/ejercicio-1-4
+  mvn clean javafx:run
+  ```
+
+- **Vía IDE (IntelliJ IDEA / NetBeans / Eclipse / VS Code)**:
+  1. Abrir la carpeta `ejercicio-1-4` como proyecto Maven.
   2. Ejecutar la clase `Main.java` o `App.java` haciendo clic derecho ➔ **Run**.
