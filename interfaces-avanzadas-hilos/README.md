@@ -25,6 +25,7 @@ cd poo/interfaces-avanzadas-hilos
 | Ejercicio | Descripción |
 | :--- | :--- |
 | [**Ejercicio 3.1**](./ejercicio-3-1/) | Conteo de clics y barra de progreso asíncrona de 10 segundos con Threads y Platform.runLater. |
+| [**Ejercicio 3.2**](./ejercicio-3-2/) | Simulación concurrente de la fábula de la liebre y la tortuga con Threads y barras de progreso. |
 
 ---
 
