@@ -31,3 +31,4 @@ O bien, abre el proyecto en tu IDE preferido (IntelliJ IDEA, Eclipse, NetBeans, 
 | [**Ejercicio 1.2**](./ejercicio-1-2/) | Desglose de dinero en billetes y monedas ordenados de mayor a menor. | Algoritmo codicioso (`/`, `%`), `TextArea` alineado a la derecha |
 | [**Ejercicio 1.3**](./ejercicio-1-3/) | Análisis de cifras (pares, impares, total, mayor, menor) y lista de divisores. | `GridPane`, descomposición de dígitos, divisibilidad |
 | [**Ejercicio 1.4**](./ejercicio-1-4/) | Generación de la tabla de multiplicar de un entero (del 1 al 10). | Iteración, formato de texto, `TextArea` |
+| [**Ejercicio 1.5**](./ejercicio-1-5/) | Control de gastos semanales: cálculo de total semanal y categoría mayor. | `GridPane`, método sobrecargado `parseNumber`, arreglos paralelos |
