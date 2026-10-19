@@ -1,6 +1,6 @@
-package src.ejercicio_2_2.models;
+package ejercicio_2_2.models;
 
-import src.ejercicio_2_2.abstracts.Figura2D;
+import ejercicio_2_2.abstracts.Figura2D;
 
 public abstract class FiguraCircular extends Figura2D {
     protected int radio;

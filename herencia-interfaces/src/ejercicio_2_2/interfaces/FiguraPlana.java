@@ -1,4 +1,4 @@
-package src.ejercicio_2_2.interfaces;
+package ejercicio_2_2.interfaces;
 
 public interface FiguraPlana {
     double calcularArea();

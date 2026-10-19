@@ -1,4 +1,4 @@
-package src.ejercicio_2_1.abstracts;
+package ejercicio_2_1.abstracts;
 
 public abstract class Persona {
     private String nombre;

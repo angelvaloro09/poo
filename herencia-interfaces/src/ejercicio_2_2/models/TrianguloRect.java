@@ -1,4 +1,4 @@
-package src.ejercicio_2_2.models;
+package ejercicio_2_2.models;
 
 public class TrianguloRect extends FiguraRecta {
     public TrianguloRect(int alto, int ancho) {

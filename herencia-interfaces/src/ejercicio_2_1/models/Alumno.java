@@ -1,6 +1,6 @@
-package src.ejercicio_2_1.models;
+package ejercicio_2_1.models;
 
-import src.ejercicio_2_1.abstracts.Persona;
+import ejercicio_2_1.abstracts.Persona;
 
 public class Alumno extends Persona {
 

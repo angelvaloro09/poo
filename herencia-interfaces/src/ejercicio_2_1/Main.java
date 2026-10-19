@@ -1,7 +1,7 @@
-package src.ejercicio_2_1;
+package ejercicio_2_1;
 
-import src.ejercicio_2_1.models.Alumno;
-import src.ejercicio_2_1.models.Profesor;
+import ejercicio_2_1.models.Alumno;
+import ejercicio_2_1.models.Profesor;
 
 public class Main {
     public static void main(String[] args) {
