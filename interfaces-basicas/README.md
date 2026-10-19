@@ -19,6 +19,7 @@ Cada ejercicio está estructurado como un proyecto independiente para garantizar
 | Ejercicio | Descripción | Tecnologías Clave | Estado |
 | :--- | :--- | :--- | :---: |
 | [**Ejercicio 1.1**](./ejercicio-1-1/) | Cálculo de edad en años y meses a partir de la fecha de nacimiento. | JavaFX, FXML, `java.time` (`LocalDate`, `Period`), `Alert` | ✅ Concluido |
+| [**Ejercicio 1.2**](./ejercicio-1-2/) | Desglose de dinero en billetes y monedas en orden descendente. | JavaFX, FXML, Greedy Algorithm (división y módulo), `Alert` | ✅ Concluido |
 
 ---
 
@@ -55,4 +56,39 @@ ejercicio-1-1/
 
 - **Vía IDE (IntelliJ IDEA / NetBeans / Eclipse / VS Code)**:
   1. Abrir la carpeta `ejercicio-1-1` como proyecto Maven (o abrir el repositorio completo y dejar que el IDE detecte el `pom.xml`).
+  2. Ejecutar la clase `Main.java` o `App.java` haciendo clic derecho ➔ **Run**.
+
+---
+
+### [Ejercicio 1.2: Desglose de Dinero](./ejercicio-1-2/)
+
+#### Descripción
+Aplicación gráfica con ventana titulada *"Desglose de dinero"*, que recibe una cantidad entera de dinero e indica la cantidad de billetes y monedas de cada denominación ($500, $200, $100, $50, $20, $10, $5, $2, $1) ordenados de manera descendente. Incluye botón para limpiar campos y validaciones con `Alert` ante entradas no numéricas o valores menores o iguales a cero.
+
+#### Estructura del proyecto
+```text
+ejercicio-1-2/
+├── pom.xml
+└── src/
+    └── main/
+        ├── java/
+        │   └── com/angelvaloro09/ejercicio_1_2/
+        │       ├── App.java            # Punto de entrada de JavaFX (carga view.fxml)
+        │       ├── AppController.java  # Controlador con lógica de desglose y eventos
+        │       └── Main.java           # Lanzador estándar compatible con cualquier IDE
+        └── resources/
+            └── com/angelvaloro09/ejercicio_1_2/
+                └── view.fxml           # Vista con TextArea alineado a la derecha
+```
+
+#### Ejecución
+
+- **Vía Terminal (Maven)**:
+  ```bash
+  cd interfaces-basicas/ejercicio-1-2
+  mvn clean javafx:run
+  ```
+
+- **Vía IDE (IntelliJ IDEA / NetBeans / Eclipse / VS Code)**:
+  1. Abrir la carpeta `ejercicio-1-2` como proyecto Maven.
   2. Ejecutar la clase `Main.java` o `App.java` haciendo clic derecho ➔ **Run**.
