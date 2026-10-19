@@ -6,6 +6,8 @@ import javafx.scene.control.ProgressBar;
 
 public abstract class Runner implements Runnable {
 
+    protected static boolean hasWinner = false;
+
     protected String name;
     protected int stepDelayMs;
     protected ProgressBar progressBar;
@@ -18,6 +20,10 @@ public abstract class Runner implements Runnable {
         this.progressBar = progressBar;
         this.statusLabel = statusLabel;
         this.progress = 0.0;
+    }
+
+    public static void resetRace() {
+        hasWinner = false;
     }
 
     @Override
@@ -38,7 +44,14 @@ public abstract class Runner implements Runnable {
             this.checkSpecialBehavior();
             this.updateUI(null, this.progress);
         }
-        this.updateUI(this.name + ": ¡Llegó a la meta!", 1.0);
+        synchronized (Runner.class) {
+            if (!hasWinner) {
+                hasWinner = true;
+                this.updateUI(this.name + ": ¡Ganó la carrera!", 1.0);
+            } else {
+                this.updateUI(this.name + ": ¡Llegó a la meta!", 1.0);
+            }
+        }
     }
 
     protected void updateUI(String message, double currentProgress) {

@@ -27,6 +27,7 @@ public class AppController {
     @FXML
     public void onStartRaceClicked(ActionEvent event) {
         this.startRaceButton.setDisable(true);
+        Runner.resetRace();
         Runner hare = new HareRunner(this.hareProgressBar, this.hareStatusLabel);
         Runner tortoise = new TortoiseRunner(this.tortoiseProgressBar, this.tortoiseStatusLabel);
 
@@ -41,13 +42,12 @@ public class AppController {
 
         Thread coordinatorThread = new Thread(() -> {
             try {
-                hareThread.join(); // Espera a que termine la liebre
-                tortoiseThread.join(); // Espera a que termine la tortuga
+                hareThread.join();
+                tortoiseThread.join();
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
 
-            // Cuando ambos han llegado a la meta, rehabilitamos el botón en la UI
             Platform.runLater(() -> {
                 this.startRaceButton.setDisable(false);
             });
