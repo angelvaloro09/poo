@@ -19,7 +19,7 @@ public abstract class FiguraRecta extends Figura2D {
     }
 
     public int getAlto() {
-        return alto;
+        return this.alto;
     }
 
     public FiguraRecta setAlto(int alto) {
@@ -31,7 +31,7 @@ public abstract class FiguraRecta extends Figura2D {
     }
 
     public int getAncho() {
-        return ancho;
+        return this.ancho;
     }
 
     public FiguraRecta setAncho(int ancho) {
@@ -41,5 +41,4 @@ public abstract class FiguraRecta extends Figura2D {
         this.ancho = ancho;
         return this;
     }
-
 }

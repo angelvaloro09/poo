@@ -18,7 +18,7 @@ public class Profesor extends Persona {
     }
 
     public int getNumEmpleado() {
-        return numEmpleado;
+        return this.numEmpleado;
     }
 
     public Profesor setNumEmpleado(int numEmpleado) {
@@ -30,5 +30,4 @@ public class Profesor extends Persona {
     public String toString() {
         return "Un profesor de edad " + this.getEdad() + ", con clave " + this.getNumEmpleado();
     }
-
 }

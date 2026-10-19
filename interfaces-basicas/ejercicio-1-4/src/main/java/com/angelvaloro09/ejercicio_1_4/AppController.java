@@ -30,7 +30,7 @@ public class AppController {
     @FXML
     public void onClear(ActionEvent event) {
         this.numberTextField.clear();
-        this.tableTextArea.setText("");
+        this.tableTextArea.clear();
     }
 
     private Integer parseNumber() {

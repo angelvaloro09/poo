@@ -13,7 +13,7 @@ public abstract class FiguraCircular extends Figura2D {
     }
 
     public int getRadio() {
-        return radio;
+        return this.radio;
     }
 
     public FiguraCircular setRadio(int radio) {

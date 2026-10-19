@@ -21,7 +21,7 @@ public abstract class Persona {
     }
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public Persona setNombre(String nombre) {
@@ -33,7 +33,7 @@ public abstract class Persona {
     }
 
     public int getEdad() {
-        return edad;
+        return this.edad;
     }
 
     public Persona setEdad(int edad) {

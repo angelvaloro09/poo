@@ -23,3 +23,6 @@ replay_pid*
 *.iml
 bin/
 target/
+
+# Personal / Local Documents
+*.pdf
