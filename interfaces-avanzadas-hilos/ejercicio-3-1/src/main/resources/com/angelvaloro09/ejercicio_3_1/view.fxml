@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="420.0" prefWidth="350.0" spacing="15.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.angelvaloro09.ejercicio_3_1.AppController">
+   <padding>
+      <Insets bottom="30.0" left="35.0" right="35.0" top="30.0" />
+   </padding>
+   <children>
+      <Label text="Contar número de clics">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="countTextField" editable="false" focusTraversable="false" maxWidth="260.0" prefWidth="260.0" text="0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="countButton" mnemonicParsing="false" onAction="#onCountClicked" prefWidth="110.0" text="¡Contar!">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label text="Esperar 10 segundos">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Label>
+      <ProgressBar fx:id="progressBar" maxWidth="260.0" prefHeight="22.0" prefWidth="260.0" progress="0.0" />
+      <Button fx:id="waitButton" mnemonicParsing="false" onAction="#onWaitClicked" prefWidth="110.0" text="¡Esperar!">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>
