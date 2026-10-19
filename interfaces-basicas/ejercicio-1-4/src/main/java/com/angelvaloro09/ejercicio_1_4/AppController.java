@@ -23,20 +23,20 @@ public class AppController {
             for (int i = 1; i <= 10; i++) {
                 results.append(number + " x " + i + " = " + (number * i) + "\n");
             }
-            tableTextArea.setText(results.toString());
+            this.tableTextArea.setText(results.toString());
         }
     }
 
     @FXML
     public void onClear(ActionEvent event) {
-        numberTextField.clear();
-        tableTextArea.setText("");
+        this.numberTextField.clear();
+        this.tableTextArea.setText("");
     }
 
     private Integer parseNumber() {
         int num = 0;
         try {
-            num = Integer.parseInt(numberTextField.getText());
+            num = Integer.parseInt(this.numberTextField.getText());
         } catch (NumberFormatException e) {
             Alert alert = new Alert(AlertType.ERROR);
             alert.setTitle("Error de formato");

@@ -24,18 +24,18 @@ public class AppController {
         if (period != null) {
             int years = period.getYears();
             int months = period.getMonths();
-            resultLabel.setText("Tiene " + years + " años con " + months + " meses");
+            this.resultLabel.setText("Tiene " + years + " años con " + months + " meses");
         }
     }
 
     @FXML
     public void onClean(ActionEvent event) {
-        birthDateTextField.clear();
-        resultLabel.setText("");
+        this.birthDateTextField.clear();
+        this.resultLabel.setText("");
     }
 
     private Period calculatePeriod() {
-        String birthDateString = birthDateTextField.getText();
+        String birthDateString = this.birthDateTextField.getText();
 
         if (birthDateString == null || birthDateString.isBlank()) {
             Alert alert = new Alert(AlertType.ERROR);

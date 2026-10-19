@@ -40,49 +40,49 @@ public class AppController {
 
     @FXML
     public void onAnalyze(ActionEvent event) {
-        digits.clear();
+        this.digits.clear();
         Integer number = this.parseNumber();
         if (number != null) {
             int absNumber = Math.abs(number);
 
             if (absNumber == 0) {
-                digitCountTextField.setText("1");
-                oddSumTextField.setText("0");
-                evenSumTextField.setText("0");
-                totalSumTextField.setText("0");
-                maxDigitTextField.setText("0");
-                minDigitTextField.setText("0");
-                divisorsTextArea.setText("0");
+                this.digitCountTextField.setText("1");
+                this.oddSumTextField.setText("0");
+                this.evenSumTextField.setText("0");
+                this.totalSumTextField.setText("0");
+                this.maxDigitTextField.setText("0");
+                this.minDigitTextField.setText("0");
+                this.divisorsTextArea.setText("0");
                 return;
             }
 
-            digitCountTextField.setText(String.valueOf(this.digitCount(absNumber)));
-            oddSumTextField.setText(String.valueOf(this.oddDigitsSum(absNumber)));
-            evenSumTextField.setText(String.valueOf(this.evenDigitsSum(absNumber)));
-            totalSumTextField.setText(String.valueOf(this.digitsSum(absNumber)));
-            maxDigitTextField.setText(String.valueOf(this.getMaxDigit(absNumber)));
-            minDigitTextField.setText(String.valueOf(this.getMinDigit(absNumber)));
-            divisorsTextArea.setText(this.getDivisors(absNumber));
+            this.digitCountTextField.setText(String.valueOf(this.digitCount(absNumber)));
+            this.oddSumTextField.setText(String.valueOf(this.oddDigitsSum(absNumber)));
+            this.evenSumTextField.setText(String.valueOf(this.evenDigitsSum(absNumber)));
+            this.totalSumTextField.setText(String.valueOf(this.digitsSum(absNumber)));
+            this.maxDigitTextField.setText(String.valueOf(this.getMaxDigit(absNumber)));
+            this.minDigitTextField.setText(String.valueOf(this.getMinDigit(absNumber)));
+            this.divisorsTextArea.setText(this.getDivisors(absNumber));
         }
     }
 
     @FXML
     public void onClear(ActionEvent event) {
-        numberTextField.clear();
-        digitCountTextField.clear();
-        oddSumTextField.clear();
-        evenSumTextField.clear();
-        totalSumTextField.clear();
-        maxDigitTextField.clear();
-        minDigitTextField.clear();
-        divisorsTextArea.clear();
-        digits.clear();
+        this.numberTextField.clear();
+        this.digitCountTextField.clear();
+        this.oddSumTextField.clear();
+        this.evenSumTextField.clear();
+        this.totalSumTextField.clear();
+        this.maxDigitTextField.clear();
+        this.minDigitTextField.clear();
+        this.divisorsTextArea.clear();
+        this.digits.clear();
     }
 
     private Integer parseNumber() {
         int num = 0;
         try {
-            num = Integer.parseInt(numberTextField.getText());
+            num = Integer.parseInt(this.numberTextField.getText());
         } catch (NumberFormatException e) {
             Alert alert = new Alert(AlertType.ERROR);
             alert.setTitle("Error de formato");
@@ -98,7 +98,7 @@ public class AppController {
         int count = 0;
         while (num != 0) {
             count++;
-            digits.add(num % 10);
+            this.digits.add(num % 10);
             num /= 10;
         }
         return count;
@@ -138,16 +138,16 @@ public class AppController {
     }
 
     private int getMaxDigit(int num) {
-        int max = digits.get(0);
-        for (int digit : digits) {
+        int max = this.digits.get(0);
+        for (int digit : this.digits) {
             max = (max < digit) ? digit : max;
         }
         return max;
     }
 
     private int getMinDigit(int num) {
-        int min = digits.get(0);
-        for (int digit : digits) {
+        int min = this.digits.get(0);
+        for (int digit : this.digits) {
             min = (min > digit) ? digit : min;
         }
         return min;

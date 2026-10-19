@@ -22,32 +22,32 @@ public class AppController {
         StringBuilder result = new StringBuilder();
         int amount = this.calculateAmounts();
         if (amount > 0) {
-            for (int denomination : denominations) {
+            for (int denomination : this.denominations) {
                 int quantity = amount / denomination;
                 amount %= denomination;
                 result.append(quantity).append("\n");
             }
-            resultsTextArea.setText(result.toString());
+            this.resultsTextArea.setText(result.toString());
         }
     }
 
     @FXML
     public void onClear(ActionEvent event) {
-        amountTextField.clear();
-        resultsTextArea.clear();
+        this.amountTextField.clear();
+        this.resultsTextArea.clear();
     }
 
     private int calculateAmounts() {
         int amount = -1;
         try {
-            amount = Integer.parseInt(amountTextField.getText().trim());
+            amount = Integer.parseInt(this.amountTextField.getText().trim());
             if (amount <= 0) {
                 Alert alert = new Alert(AlertType.ERROR);
                 alert.setTitle("Error de cantidad");
                 alert.setHeaderText(null);
                 alert.setContentText("Por favor, ingrese una cantidad mayor a cero");
                 alert.showAndWait();
-                return;
+                return -1;
             }
         } catch (NumberFormatException e) {
             Alert alert = new Alert(AlertType.ERROR);
